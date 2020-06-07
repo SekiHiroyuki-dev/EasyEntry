@@ -12,16 +12,10 @@
         @endif
         {{ config('app.name', 'ITSUMEN') }}
     </title>
+
     <!-- Icons-->
-    <link rel="icon" type="image/ico" href="{{ app_asset('/favicon.ico') }}" sizes="any" />
-    <link href="{{ app_asset('/coreui/node_modules/@coreui/icons/css/coreui-icons.min.css') }}" rel="stylesheet">
-    <link href="{{ app_asset('/coreui/node_modules/flag-icon-css/css/flag-icon.min.css') }}" rel="stylesheet">
-    <link href="{{ app_asset('/coreui/node_modules/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ app_asset('/coreui/node_modules/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
     <!-- Main styles for this application-->
-    <link href="{{ app_asset('/coreui/src/css/style.css') }}" rel="stylesheet">
-    <link href="{{ app_asset('/coreui/src/vendors/pace-progress/css/pace.min.css') }}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
     <style>
     .h4 {
         font-family: 'Noto Sans', sans-serif;
@@ -36,7 +30,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-sm-6">
-            <img src="{{ app_asset('/img/itsumen_logo.png') }}" class="img-fluid mx-auto mb-2 d-block">
+            <!---->
         </div>
       </div>
 
@@ -88,7 +82,7 @@
                     <div class="row">
                       <div class="col-sm-6">
                         <p class="mb-0 text-muted">
-                            <small> 推奨ブラウザ:</small><span class="h4"> <img src="{{ app_asset('/img/chrome_icon.svg') }}"> Chrome</span>
+                            <small> 推奨ブラウザ:</small><span class="h4"> <!----> Chrome</span>
                         </p>
                       </div>
 
@@ -105,16 +99,8 @@
         </div>
       </div>
     </div>
+
     <!-- CoreUI and necessary plugins-->
-    <script src="{{ app_asset('/coreui/node_modules/jquery/dist/jquery.min.js') }}"></script>
-    <script src="{{ app_asset('/coreui/node_modules/popper.js/dist/umd/popper.min.js') }}"></script>
-    <script src="{{ app_asset('/coreui/node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-    <script src="{{ app_asset('/coreui/node_modules/pace-progress/pace.min.js') }}"></script>
-    <script src="{{ app_asset('/coreui/node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
-    <script src="{{ app_asset('/coreui/node_modules/@coreui/coreui/dist/js/coreui.min.js') }}"></script>
     <!-- Plugins and scripts required by this view-->
-    <script src="{{ app_asset('/coreui/node_modules/chart.js/dist/Chart.min.js') }}"></script>
-    <script src="{{ app_asset('/coreui/node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js') }}"></script>
-    <script src="{{ app_asset('/coreui/src/js/main.js') }}"></script>
   </body>
 </html>

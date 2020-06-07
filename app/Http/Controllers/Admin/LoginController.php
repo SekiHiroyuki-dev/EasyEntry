@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-//use App\Http\Requests\LoginRequest;
-//use App\Models\Auth\AuthAdmin;
+use App\Http\Requests\LoginRequest;
+use App\Models\Auth\AuthAdmin;
 
 class LoginController extends Controller
 {
@@ -16,14 +16,9 @@ class LoginController extends Controller
 
     public function login(LoginRequest $request)
     {
-        // authが完了するとsessionが破棄されるのでここで取り出し
-        $returnUrl = AuthAdmin::getReturnUrl();
-
-        AuthAdmin::auth([
-            'id'       => $request->id,
-            'password' => $request->password
+        return AuthAdmin::auth([
+            'login_id'       => $request->id,
+            'login_password' => $request->password
         ]);
-
-        return redirect($returnUrl);
     }
 }
